@@ -34,9 +34,8 @@ Check your bind9 logs to see if it went well.
 
 use Getopt::ArgParse;
 use Net::DNS::Update;
+use Net::DNS::RR;
 use Net::DNS;
-use MIME::Base64;
-use Digest::HMAC_SHA1;
 
 my $ap = Getopt::ArgParse->new_parser();
 $ap->add_arg('--syslog', type => 'Bool');
