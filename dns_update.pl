@@ -25,7 +25,9 @@ Add the zone too (replace mykeyname and myname.ddns.example.com):
 Then reload bind9 config.
 
 Usage example:
-> perl dns_update.pl --verbose --server ns1.example.com --zone ddns.example.com --name myhost --address 127.0.0.1 --keyfile mykey --keyname myname
+> perl dns_update.pl --verbose --server ns1.example.com \
+    --zone ddns.example.com --name myhost --address 127.0.0.1 \
+    --keyfile mykey --keyname myname
 
 Check your bind9 logs to see if it went well.
 =cut
