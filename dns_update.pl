@@ -68,8 +68,8 @@ print "Preparing record: $record\n" if $a->verbose;
 # Load DNS key
 my $file;
 if (!open($file, "<", $a->keyfile)) {
-    syslog(LOG_ERR, "Can't open '$a->keyfile' for reading DNS key: $!") if $a->syslog;
-    die("Can't open '$a->keyfile' for reading DNS key: $!");
+    syslog(LOG_ERR, "Can't open key '". $a->keyfile ."': $!") if $a->syslog;
+    die("Can't open key '". $a->keyfile ."': $!");
 }
 my $key = <$file>;
 chomp($key);
